@@ -135,8 +135,8 @@ sr.reveal(`.qualification__content, .achievements__card`, {interval: 100})
 
 function sendMail(){
     let parms = {
-	    name : document.getElementById("name").value,
-	    email : document.getElementById("email").value,
+	    name : document.getElementById("user_name").value,
+	    email : document.getElementById("user_email").value,
 	    subject : document.getelementById("subject").value,
 	    message : document.getelementById("message").value,
     }
