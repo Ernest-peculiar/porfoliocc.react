@@ -132,23 +132,3 @@ sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100})
 sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, {origin: 'left'})
 sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'})
 sr.reveal(`.qualification__content, .achievements__card`, {interval: 100})
-function sendMail() {
-    let params = {
-      name: document.getElementById("user_name").value,
-      email: document.getElementById("user_email").value,
-      subject: document.getElementById("subject").value,  // Corrected to getElementById
-      message: document.getElementById("message").value,  // Corrected to getElementById
-    };
-  
-    // Send the email using EmailJS
-    emailjs.send("service_roam0sq", "template_7qil2ub", params)
-      .then(function(response) {
-        console.log('Email Sent!!', response);
-        alert("Your message was sent successfully!");  // Optional: Show success message
-      })
-      .catch(function(error) {
-        console.log('Failed to send email:', error);
-        alert("Oops! Something went wrong. Please try again.");
-      });
-  }
-  
