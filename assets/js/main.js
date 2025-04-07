@@ -132,3 +132,15 @@ sr.reveal(`.home__info div`, {delay: 600, origin: 'bottom', interval: 100})
 sr.reveal(`.skills__content:nth-child(1), .contact__content:nth-child(1)`, {origin: 'left'})
 sr.reveal(`.skills__content:nth-child(2), .contact__content:nth-child(2)`, {origin: 'right'})
 sr.reveal(`.qualification__content, .achievements__card`, {interval: 100})
+
+function sendMail(){
+    let parms = {
+	    name : document.getElementById("name").value,
+	    email : document.getElementById("email").value,
+	    subject : document.getelementById("subject").value,
+	    message : document.getelementById("message").value,
+    }
+
+    emailjs.send("service_roam0sq","template_7qil2ub",parms).then("Email Sent!!")
+}
+
